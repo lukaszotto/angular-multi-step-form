@@ -1,13 +1,26 @@
-<html ng-app="">
+<html>
 <head>
   <script src="js/angular.min.js"></script>
-  <script src="js/controllers.js"></script>
+  <script src="js/angular.route.min.js"></script>
+  <script src="js/app.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.css">
 </head>
-<body>
+<body ng-app="formApp">
     
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">NG multi form</a>
+            </div>
+        </div>
+    </nav>
     
+    <div class="container">
 
+        <!-- views will be injected here -->
+        <div ui-view></div>
+
+    </div>
 </body>
 </html>
