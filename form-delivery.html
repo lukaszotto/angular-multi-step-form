@@ -1,7 +1,8 @@
-<select class="form-control" ng-model="formData.delivery">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
+<select placeholder="kurier" class="form-control" ng-options="val.carrierID as val.carrierName for val in formDeliveryData" ng-model="formData.delivery">
 </select>
+
+<div class="checkbox">
+    <label class="checkbox">
+        <input type="checkbox" name="agree" id="agree" ng-model="formData.agree"> Zgadzam się z Warunkami Świadczenia Usługi i podporządkuję się im bezwarunkowo. <a href="#">(Przeczytaj Warunki Świadczenia Usługi)</a>
+    </label>
+</div>

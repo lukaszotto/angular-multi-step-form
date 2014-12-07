@@ -20,8 +20,7 @@ formApp.config(function($stateProvider, $urlRouterProvider) {
         // url will be nested (/form/profile)
         .state('form.account', {
             url: '/account',
-            templateUrl: 'form-account.html',
-            controller: 'accountController'
+            templateUrl: 'form-account.html'
         })
         .state('form.delivery', {
             url: '/delivery',
@@ -41,20 +40,18 @@ formApp.controller('formController', function($scope) {
     
     // we will store all of our form data in this object
     $scope.formData = {};
+    $scope.formDeliveryData = [
+        { carrierID: 'pp', carrierName: 'Poczta Polska' },
+        { carrierID: 'kex', carrierName: 'KEX' },
+        { carrierID: 'ups', carrierName: 'UPS' },
+        { carrierID: 'dhl', carrierName: 'DHL' }
+    ];
+
     
     // function to process the form
     $scope.processForm = function() {
         alert('poszlo!');
     };
-    
-});
-formApp.controller('accountController', function($scope) {
-    
-    // we will store all of our form data in this object
-    $scope.formAcountData = {};
-    
-    // function to process the form
-
     
 });
 
